@@ -101,7 +101,7 @@
 				<nom_fichier_sql>mysql</nom_fichier_sql>
 				<initialisation_donnee_bdd>true</initialisation_donnee_bdd>
 				<mode_initialisation_donnee_bdd>always</mode_initialisation_donnee_bdd>
-				<dossier_upload>C:\\\\Users\\stagiaire\\Desktop\\Angular - FB\\images</dossier_upload>
+				<dossier_upload>A changer dans le fichier C:\Users\stagiaire\.m2\settings.xml</dossier_upload>
 				<jwt_secret>azerty</jwt_secret>
 			</properties>
 		</profile>
@@ -120,7 +120,7 @@
 					root
 				</utilisateur_bdd>
 				<password_bdd>
-					SalAx5467!$
+					Info à définir dans le fichier settings.xml du serveur
 				</password_bdd>
 				<ddl_auto>
 					none
@@ -129,7 +129,7 @@
 				<initialisation_donnee_bdd>false</initialisation_donnee_bdd>
 				<mode_initialisation_donnee_bdd>never</mode_initialisation_donnee_bdd>
 				<dossier_upload>/uploads</dossier_upload>
-				<jwt_secret>azerty</jwt_secret>
+				<jwt_secret>Info a définir dans le fichier settings.xml du serveur</jwt_secret>
 			</properties>
 		</profile>
 	</profiles>
