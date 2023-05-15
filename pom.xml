@@ -18,6 +18,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<skipUnitTest>false</skipUnitTest>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -82,6 +83,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
+				<skipUnitTest>false</skipUnitTest>
 				<adresse_serveur_bdd>
 					localhost:3306
 				</adresse_serveur_bdd>
@@ -92,7 +94,6 @@
 					root
 				</utilisateur_bdd>
 				<password_bdd>
-
 				</password_bdd>
 				<ddl_auto>
 					create
@@ -101,12 +102,14 @@
 				<initialisation_donnee_bdd>true</initialisation_donnee_bdd>
 				<mode_initialisation_donnee_bdd>always</mode_initialisation_donnee_bdd>
 				<dossier_upload>C:\\\\Users\\stagiaire\\Desktop\\Angular - FB\\images</dossier_upload>
+				<jwt_secret>azerty</jwt_secret>
 			</properties>
 		</profile>
 
 		<profile>
 			<id>prod</id>
 			<properties>
+				<skipUnitTest>true</skipUnitTest>
 				<nom_serveur_bdd>
 					172.18.0.2:3306
 				</nom_serveur_bdd>
@@ -126,6 +129,7 @@
 				<initialisation_donnee_bdd>false</initialisation_donnee_bdd>
 				<mode_initialisation_donnee_bdd>never</mode_initialisation_donnee_bdd>
 				<dossier_upload>/uploads</dossier_upload>
+				<jwt_secret>azerty</jwt_secret>
 			</properties>
 		</profile>
 	</profiles>
@@ -150,7 +154,7 @@
 				<artifactId >maven-surefire-plugin</artifactId>
 				<version>3.0.0-M6</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<skipTests>${skipUnitTest}</skipTests>
 				</configuration>
 			</plugin>
 

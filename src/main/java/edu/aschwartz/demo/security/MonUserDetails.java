@@ -28,7 +28,10 @@ public class MonUserDetails implements UserDetails {
             roles.add(new SimpleGrantedAuthority("ROLE_UTILISATEUR"));
         }
         return roles;*/
-        return List.of(new SimpleGrantedAuthority(utilisateur.getRole().getName()));
+        if(utilisateur.getRole()!=null){
+            return List.of(new SimpleGrantedAuthority(utilisateur.getRole().getName()));
+        }
+        return List.of(new SimpleGrantedAuthority("ROLE_UTILISATEUR"));
     }
 
     @Override
